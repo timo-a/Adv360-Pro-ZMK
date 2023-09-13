@@ -1,0 +1,206 @@
+[
+	{
+		"names": [
+			"DE_N1"
+		],
+		"description": "DE_N1",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_ACUTE "
+		],
+		"description": "DE_ACUTE ",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N2"
+		],
+		"description": "DE_N2",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N3 "
+		],
+		"description": "DE_N3 ",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N4 "
+		],
+		"description": "DE_N4 ",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N5"
+		],
+		"description": "DE_N5",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N6 "
+		],
+		"description": "DE_N6 ",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N7"
+		],
+		"description": "DE_N7",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N8"
+		],
+		"description": "DE_N8",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N9"
+		],
+		"description": "DE_N9",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_N0"
+		],
+		"description": "DE_N0",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	},
+	{
+		"names": [
+			"DE_SZ"
+		],
+		"description": "DE_SZ",
+		"clarify": false,
+		"documentation": "",
+		"os": {
+			"windows": true,
+			"linux": true,
+			"android": true,
+			"macos": true,
+			"ios": true
+		},
+		"footnotes": {},
+		"type": "UD"
+	}
+]
