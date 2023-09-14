@@ -47,6 +47,7 @@
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
+
     fn {
       display-name = "Fn";
       bindings = <
@@ -57,6 +58,7 @@
         &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
     };
+
     mod {
       display-name = "Mod";
       bindings = <
