@@ -1,0 +1,15 @@
+/* Digit Row of neo qwertz with appropriate shifted values */
+/* four number represet the hex coordinates in unicode, first without, then with shift*/
+ZMK_UNICODE_PAIR(   neo_hat,    N0, N3, N0, N2,    N0, N3, N0,  C)
+ZMK_UNICODE_PAIR(   neo_1,      N0, N0, N3, N1,    N0, N0,  B, N0)
+ZMK_UNICODE_PAIR(   neo_2,      N0, N0, N3, N2,    N0, N0,  A, N7)
+ZMK_UNICODE_PAIR(   neo_3,      N0, N0, N3, N3,    N2, N1, N1, N3)
+ZMK_UNICODE_PAIR(   neo_4,      N0, N0, N3, N4,    N0, N0,  B,  B)
+ZMK_UNICODE_PAIR(   neo_5,      N0, N0, N3, N5,    N0, N0,  A,  B)
+ZMK_UNICODE_PAIR(   neo_6,      N0, N0, N3, N6,    N0, N0, N2, N4)
+ZMK_UNICODE_PAIR(   neo_7,      N0, N0, N3, N7,    N2, N0,  A,  C)
+ZMK_UNICODE_PAIR(   neo_8,      N0, N0, N3, N8,    N2, N0, N1,  E)
+ZMK_UNICODE_PAIR(   neo_9,      N0, N0, N3, N9,    N2, N0, N1,  C)
+ZMK_UNICODE_PAIR(   neo_0,      N0, N0, N3, N0,    N2, N0, N1,  D)
+ZMK_UNICODE_PAIR(   neo_sz,     N0, N0,  D,  F,    N1,  E, N9,  E)
+ZMK_UNICODE_PAIR(   neo_grave,  N0, N3, N0, N0,    N0, N3, N2, N7)

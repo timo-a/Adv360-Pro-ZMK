@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 #include "keys_de.h"
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_adv360.h"
+#include "../zmk-nodefree-config/international_chars/neo_qwertz.dtsi"
 
 / {
     behaviors {
@@ -33,11 +36,11 @@
 
     default_layer {
       bindings = <
-        &kp DE_ACUTE  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &tog 1                                                                     &mo 4  &kp DE_N6  &kp DE_N7  &kp DE_N8     &kp DE_N9    &kp DE_N0        &kp DE_SZ
-        &kp TAB       &kp DE_Q   &kp DE_W   &kp DE_E   &kp DE_R   &kp DE_T   &none                                                                      &none  &kp DE_Z   &kp DE_U   &kp DE_I      &kp DE_O     &kp DE_P         &kp DE_U_UMLAUT
-        &kp ESC       &kp DE_A   &kp DE_S   &kp DE_D   &kp DE_F   &kp DE_G   &kp DE_LT            &kp LCTRL  &kp LALT  &kp LGUI   &kp RCTRL             &none  &kp DE_H   &kp DE_J   &kp DE_K      &kp DE_L     &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
-        &kp LSHFT     &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_V   &kp DE_B                                   &kp HOME  &kp PG_UP                               &kp DE_N   &kp DE_M   &kp DE_COMMA  &kp DE_DOT   &kp DE_MINUS     &kp RSHFT
-        &fnkey        &kp GRAVE  &kp CAPS   &kp LEFT   &kp RIGHT                        &kp BSPC  &kp DEL    &kp END   &kp PG_DN  &kp ENTER  &kp SPACE                    &kp UP     &kp DOWN      &kp DE_HASH  &kp DE_PLUS      &fnkey
+        &kp &neo_hat  &kp &neo_1      &kp &neo_2  &kp &neo_3  &kp &neo_4  &kp &neo_5  &tog 1                                                                     &mo 4  &kp &neo_6  &kp &neo_7  &kp &neo_8    &kp &neo_9   &kp &neo_0       &kp &neo_sz
+        &kp TAB       &kp DE_Q        &kp DE_W    &kp DE_E    &kp DE_R    &kp DE_T    &none                                                                      &none  &kp DE_Z    &kp DE_U    &kp DE_I      &kp DE_O     &kp DE_P         &kp DE_U_UMLAUT
+        &kp ESC       &kp DE_A        &kp DE_S    &kp DE_D    &kp DE_F    &kp DE_G    &kp DE_LT            &kp LCTRL  &kp LALT  &kp LGUI   &kp RCTRL             &none  &kp DE_H    &kp DE_J    &kp DE_K      &kp DE_L     &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+        &kp LSHFT     &kp DE_Y        &kp DE_X    &kp DE_C    &kp DE_V    &kp DE_B                                    &kp HOME  &kp PG_UP                               &kp DE_N    &kp DE_M    &kp DE_COMMA  &kp DE_DOT   &kp DE_MINUS     &kp RSHFT
+        &fnkey        &kp &neo_grave  &kp CAPS    &kp LEFT    &kp RIGHT                          &kp BSPC  &kp DEL    &kp END   &kp PG_DN  &kp ENTER  &kp SPACE                     &kp UP      &kp DOWN      &kp DE_HASH  &kp DE_PLUS      &fnkey
             >;
     };
 
