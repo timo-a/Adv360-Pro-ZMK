@@ -53,11 +53,11 @@
 
     alt_gr {
       bindings = <
-        &trans  &trans     &trans  &trans  &trans  &trans  &tog 1                                                  &mo 4  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-        &trans  &kp DE_AT  &trans  &trans  &trans  &trans  &none                                                   &none  &trans  &trans  &trans  &trans   &trans   &trans
-        &trans  &trans     &trans  &trans  &trans  &trans  &none           &trans  &trans  &trans  &trans          &none  &trans  &trans  &trans  &trans   &trans   &trans
-        &trans  &trans     &trans  &trans  &trans  &trans                          &trans  &trans                         &trans  &trans  &trans  &trans   &trans   &trans
-        &trans  &trans     &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans   &trans   &trans
+        &trans  &trans     &trans  &trans       &trans  &trans  &tog 1                                                       &mo 4  &kp F7  &kp F8       &kp F9       &kp F10      &kp F11       &kp F12
+        &trans  &kp DE_AT  &trans  &kp DE_EURO  &trans  &trans  &none                                                        &none  &trans  &kp DE_LBRC  &kp DE_LBKT  &kp DE_RBKT  &kp DE_RBRC   &kp DE_BSLH
+        &trans  &trans     &trans  &trans       &trans  &trans  &kp DE_PIPE          &trans  &trans  &trans  &trans          &none  &trans  &trans       &trans       &trans       &trans        &trans
+        &trans  &trans     &trans  &trans       &trans  &trans                               &trans  &trans                         &trans  &trans       &trans       &trans       &trans        &trans
+        &trans  &trans     &trans  &trans       &trans                       &trans  &trans  &trans  &trans  &trans  &trans                 &trans       &trans       &trans       &kp DE_TILDE  &trans
       >;
     };
 
