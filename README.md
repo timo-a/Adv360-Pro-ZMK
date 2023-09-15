@@ -1,5 +1,128 @@
 # ADV360-PRO-ZMK
 
+## How to get neo layouts?
+
+The advantage 360 pro is programmable via zkm, so ideally we'd like to just programm the neo behaviour onto the 
+keyboard and save us the setup on the operating system. This is not so easy however because a keyboard does not 
+actually send letters to the PC but keys (HID codes to be exact). And there is for example no `ℓ` key. Another thing is dead key behavior:
+The keyboard sends a grave accent (or rather its key) and then the letter e and then the os turns that into `è`. 
+If we want the keyboard to do this we'd have to send nothing at all for the grave accent but somehow save this user 
+intent in a "grave accent has been pressed" state and then send `è` when e is pressed. And again we cannot simply send 
+`è` because there is no `è` key.  
+It seems generally possible to program all of this onto the keyboard, but it is a lot of work and so to start we keep 
+it simple and make the keyboard work with existing keyboard layouts for the operating systems.
+
+### with keyboard layouts on os
+
+The kinesis advantage 360 pro has fewer keys than a regular keyboard, fewer even then the previous model.
+In order to be able to have full functionality we need to address this first:
+
+#### F keys are on the digits  
+On a regular keyboard they have separate keys, on the kinesis you press `fn` + `1` for `F2`.
+This is fine, we'll keep the fn layer and add any non neo functionality there.
+
+#### No `Print` key
+We use the `fn` layer: `fn` + `p` = `Print`.
+
+#### `` ` `` `=`  `<` rotation  
+
+| Key        | US layout                                                    | Kinesis                                | we use      | reason                                                                                          |
+|------------|--------------------------------------------------------------|----------------------------------------|-------------|-------------------------------------------------------------------------------------------------|                   
+| `<`        | at the bottom left, to the left of `z`                       | not there                              | not there   | not on base layer anyway                                                                        |
+| `` ` (~)`` | left of `1`                                                  | below `z` close to where ´>´ should be | left of `1` | easier to learn                                                                                 |
+| `=`        | on the right end of the digit row, 2 to the right of `0` and | left of `1`                            | below `Z`   | has to move anyway (we could also put it on `\ ` but for now I have decided to use it as Mod 4) |
+
+#### Modifiers  
+
+| Layer | Keys intended     | we use                     | reason                |
+|:-----:|-------------------|----------------------------|-----------------------|
+|   1   | none              | none                       | -                     |
+|   2   | Shift             | Shift                      | -                     |
+|   3   | Caps lock         | Caps or `\ `               | easy access           |
+|   4   | alt gr (Mod 4)    | Caps or `\ ` a second time | not often used anyway |
+|   5   | Shift + Caps lock | Caps or `\ ` a third time  | "                      |
+|   6   | Caps lock + Mod 4 | Caps or `\ ` a fourth time | "                      |
+
+I originally wanted to use fn fom layer 3 on, but it is difficult to reach, so for start we use the existing keys.
+
+#### Numpad
+Kinesis has the numpad as a layer, you press `kp` and existing keys get new meaning.
+Neo treats them as separate keys. I guess we need to create separate layers that get activated on `kp` + <regular modifier>
+but I don't see myself using kp anytime soon, so I'll skip it for now.
+
+### Flashing neo directly onto the keyboard (no os keyboard layout)
+
+To put everything on the keyboard we need to overcome several challenges.
+
+#### shift behaviour
+
+The keyboard does not send `a` and `A` to the computer.
+Instead, it sends `[A]` and `[A] + [shift]`.
+This is no problem for letters, but it is one for the digit row:
+in neo, `[shift] + [7]` means `€`, but how should the computer know that, without a dedicated neo keyboard layout?
+
+https://www.reddit.com/r/ErgoMechKeyboards/comments/ujhp0g/why_dont_zmk_keycodes_separate_upper_and/
+
+##### extra ´[shift]´ key
+
+One way would be to just define a second shift key, lets call it `[shift2]`. 
+With this key pressed we switch to a new layer where pressing `[7]` sends `[alt gr] + [E]` = `€`.
+This works for all characters on the digit row that exist in the target layout (german).
+For all others, such as `ℓ` and maybe `ẞ` on windows we need to use a trick and send unicode characters directly.
+
+##### mod morph behaviour
+
+we can use the same shift key and define a behaviour that send something else when `[shift] + [7]` is pressed.
+Problem of unknown characters like `ℓ` remains.
+
+##### zmk-nodefree-config
+
+this repo lets us define 2 arbitrary unicode symbols for any key, one send when shift is not pressed, one when it is.
+See Unicode for disadvantages.
+https://github.com/urob/zmk-nodefree-config#zmk_unicode
+https://github.com/urob/zmk-nodefree-config#international-characters
+
+#### Unicode
+
+Operating systems allow you to input unicode characters directly by their number.
+For instance on linux you simply press `[shift] + [ctl] + [u]` and then enter the number and conform with `[enter]`.
+Kinesis can send many key presses at once so this is no problem.
+But, on windows unicode characters need a different activation.
+
+https://github.com/urob/zmk-nodefree-config/issues/2
+
+So you would need to define every key twice, once for windows, once for linux, and thus define every layer twice, 
+and then somehow switch between them when you switch os. 
+I'm not sure if such an implicit state (layer, os) can ve maintained with zkm.
+
+
+
+#### Dead keys ( ` + e = è )
+
+should work as long as the german layout knows them, otherwise there will be a problem.
+
+https://en.wikipedia.org/wiki/Combining_character
+
+#### Layers
+
+should we do anything different?
+Maybe fn key as Mod 3+ and long press for f-behavior?
+
+### numpad
+
+über kp taste einfach x mal drücken und einmal zum aufheben?
+
+
+### locale generator
+
+https://github.com/joelspadin/zmk-locale-generator
+
+This fits nowhere else. with the locale generator you can generate your own header to use in the keymap.
+E.g. in german layout bottom left is `[Y]` not `[Z]`. 
+but in the config you would write `[Z]` because that is the name of the key.
+with locale generator you can use `de_Y` instead of `Z`.
+
+
 ## Modifying the keymap
 
 [The ZMK documentation](https://zmk.dev/docs) covers both basic and advanced functionality and has a table of OS compatibility for keycodes. Please note that the RGB Underglow, Backlight and Power Management sections are not relevant to the Advantage 360 Pro's custom ZMK fork. For more information see [this note](#note)
