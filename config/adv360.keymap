@@ -24,7 +24,7 @@
               label = "MOD_TAP_DANCE";
               #binding-cells = <0>;
               tapping-term-ms = <200>;
-              bindings = <&kp CAPS>, <&kp DE_LT>, <&kp LS(RBKT)>, <&kp RA(RBKT)>;
+              bindings = <&kp CAPS>, <&kp DE_LT>, <&kp LS(BSLH)>, <&kp RA(BSLH)>;
       };
     };
 
